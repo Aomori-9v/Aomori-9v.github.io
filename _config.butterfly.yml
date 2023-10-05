@@ -640,7 +640,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: "url(/img/bg1.JPG)"
 
 # Footer Background
 footer_bg: false
@@ -903,8 +903,11 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/_custom/*.css"  media="defer" onload="this.media='all'">
   bottom:
     # - <script src="xxxx"></script>
+    - <script async data-pjax src="/js/randombg.js"></script>
+    - <script async src="/js/diytitle.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
